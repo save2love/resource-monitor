@@ -1,6 +1,6 @@
 # Resource Monitor for PC
 
-![Default screen](/ResMonitor/img/device.jpg "Device")
+![Device view](/img/device.jpg "Device")
 
 # Screens
 
