@@ -1,5 +1,5 @@
-#ifndef RESMONITOR_H
-#define RESMONITOR_H
+#ifndef RESOURCE_MONITOR_H
+#define RESOURCE_MONITOR_H
 
 #include "Settings.h"
 
