@@ -2,7 +2,7 @@
 #include "helper.h"
 #include "graph.h"
 #include "TheButton.h"
-#include "ResMonitor.h"
+#include "resource-monitor.h"
 
 LiquidCrystal_I2C lcd(0x27, 20, 4); // Check I2C address of LCD, normally 0x27 or 0x3F
 
@@ -152,8 +152,8 @@ void receivingLoop() {
 void showCPUandRAM(uint8_t row) {
   lcd.setCursor(0, row);
   lcd.print("CPU" + strPad(String(cpu_p / 10.0, 1), 5) + '%');
-  lcd.setCursor(11, row);
-  lcd.print("RAM" + strPad(String(ram_p / 10.0, 1), 5) + '%');
+  lcd.setCursor(9, row);
+  lcd.print("  RAM" + strPad(String(ram_p / 10.0, 1), 5) + '%');
 }
 
 void showRAMUtilization(uint8_t row) {
@@ -209,8 +209,8 @@ void showNewData() {
         lcd.print(strPad(String(100), 2));
       else
         lcd.print(strPad(String(cpu_p / 10.0, 0), 2) + '%');
-      lcd.setCursor(15, 2);
-      lcd.print("  RAM");
+      lcd.setCursor(17, 2);
+      lcd.print("RAM");
       lcd.setCursor(17, 3);
       if (ram_p == 1000)
         lcd.print(strPad(String(100), 2));
@@ -219,7 +219,7 @@ void showNewData() {
       break;
 
     case SCR_CPU_DETAILED:
-      graphInRow(CPU, 3, 0, 17, 3, 1000);
+      graphInRow(CPU, 3, 0, 17, 4, 1000);
       lcd.setCursor(17, 0);
       lcd.print(" C ");
       lcd.setCursor(17, 1);
@@ -236,12 +236,12 @@ void showNewData() {
     case SCR_NET_HDD:
       graphInRow(NET_I, NET_O, 1, 0, 12, 2, 500);
       graphInRow(HDD_R, HDD_W, 3, 0, 12, 2, 500);
-      lcd.setCursor(17, 0);
-      lcd.print("NET");
+      lcd.setCursor(12, 0);
+      lcd.print("     NET");
       lcd.setCursor(12, 1);
       lcd.print(strPad(convertSize(net_i + net_o), 8));
-      lcd.setCursor(17, 2);
-      lcd.print("HDD");
+      lcd.setCursor(12, 2);
+      lcd.print("     HDD");
       lcd.setCursor(12, 3);
       lcd.print(strPad(convertSize(hdd_r + hdd_w), 8));
       break;
@@ -274,12 +274,12 @@ void showNewData() {
     case SCR_NET_DETAILED:
       graphInRow(NET_O, 1, 0, 12, 2, 500);
       graphInRow(NET_I, 3, 0, 12, 2, 500);
-      lcd.setCursor(13, 0);
-      lcd.print("  NET U");
+      lcd.setCursor(12, 0);
+      lcd.print("   NET U");
       lcd.setCursor(12, 1);
       lcd.print(strPad(convertSize(net_o), 8));
-      lcd.setCursor(13, 2);
-      lcd.print("  NET D");
+      lcd.setCursor(12, 2);
+      lcd.print("   NET D");
       lcd.setCursor(12, 3);
       lcd.print(strPad(convertSize(net_i), 8));
       break;
