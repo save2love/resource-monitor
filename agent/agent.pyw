@@ -1,4 +1,5 @@
-﻿import logging
+﻿import os
+import logging
 import traceback
 import struct
 import math
@@ -8,7 +9,7 @@ import serial # pip install pyserial
 import config
 from datetime import datetime
 
-logging.basicConfig(filename='log.log',level=logging.DEBUG)
+logging.basicConfig(filename=os.path.dirname(os.path.realpath(__file__)) + '\\log.log',level=logging.DEBUG)
 
 def convert_size(size_bytes):
    if size_bytes == 0:
@@ -49,7 +50,8 @@ def printHeader(start):
 try:
 	#print(str())
 	#logging.debug("Start")
-	printHeader(True)
+	if config.serial['console']:
+		printHeader(True)
 	
 	com = serial.Serial(config.serial['port'], baudrate=config.serial['speed'], timeout=1)
 	
@@ -82,7 +84,8 @@ try:
 			sendNumericPacket(com, 8, int(disk_write_bytes / 1024.0), 4)
 
 			# Print out to stdout
-			print("│"
+			if config.serial['console']:
+				print("│"
 				+ str(cpu).rjust(5, ' ') + "% │"
 				+ str(mem.percent).rjust(5, ' ') + "% │ "
 				+ convert_size(mem.used).rjust(8, ' ') + " │ "
