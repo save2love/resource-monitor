@@ -8,11 +8,24 @@ Simple and useful project, made to monitor system resources without opening Task
 
 ### Prerequisites
 
+#### Software
+
+* [Arduino IDE](https://www.arduino.cc/en/Main/Software "Arduino IDE")
+* [Python 3.5+](https://www.python.org/downloads/ "Python 3.5")
+* [PSUtil](https://pypi.org/project/psutil/ "PSUtil")
+```
+pip install psutil
+```
+* [pyserial](https://pypi.org/project/pyserial/ "pyserial")
+```
+pip install pyserial
+```
+
 #### Libraries
 * [LiquidCrystal I2C by Marco Schwartz](https://github.com/marcoschwartz/LiquidCrystal_I2C "LiquidCrystal I2C")
 * [Bounce 2 by Thomas O Fredericks](https://github.com/thomasfredericks/Bounce2 "Bounce 2")
 
-### Hardware
+#### Hardware
 
 * Arduino Nano or another small board
 * PC2004A 20x4 LCD Display with IIC/I2C Serial Interface Adapter
