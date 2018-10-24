@@ -12,11 +12,11 @@ Simple and useful project, made to monitor system resources without opening Task
 
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software "Arduino IDE")
 * [Python 3.5+](https://www.python.org/downloads/ "Python 3.5")
-* [PSUtil](https://pypi.org/project/psutil/ "PSUtil")
+* [Python library PSUtil](https://pypi.org/project/psutil/ "PSUtil")
 ```
 pip install psutil
 ```
-* [pyserial](https://pypi.org/project/pyserial/ "pyserial")
+* [Python library pyserial](https://pypi.org/project/pyserial/ "pyserial")
 ```
 pip install pyserial
 ```
@@ -35,6 +35,12 @@ pip install pyserial
 ![Device back view](/img/device_back.jpg "Device back view")
 
 ### Installing
+
+You can setup to auto start python script in Windows using Task Scheduler and in Linux using cron
+
+#### Windows
+
+Here is [ResourceMonitorTask.xml](agent/ResourceMonitorTask.xml "ResourceMonitorTask.xml") for importing to Task Scheduler. All you need is change the path for agent.pyw script in Action tab.
 
 ### Screens
 
