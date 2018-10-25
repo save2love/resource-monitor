@@ -36,6 +36,11 @@ pip install pyserial
 ![Device schema](/img/schema.png "Device schema")
 ![Device back view](/img/device_back.jpg "Device back view")
 
+### Configuring
+
+All you need is change COM port on corresponding port number in [config.py](/agent/config.py "config.py")
+To test communication you need start [agent_console.by](/agent/agent_console.by "agent_console.by"). Console will show you actually transferred data in table view.
+
 ### Installing
 
 You can setup to auto start python script in Windows using Task Scheduler and in Linux using cron
