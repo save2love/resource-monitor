@@ -39,15 +39,19 @@ pip install pyserial
 ### Configuring
 
 All you need is change COM port on corresponding port number in [config.py](/agent/config.py "config.py")
-To test communication you need start [agent_console.by](/agent/agent_console.by "agent_console.by"). Console will show you actually transferred data in table view.
+To test communication you need start [agent_console.py](/agent/agent_console.py "agent_console.py"). Console will show you actually transferred data in table view.
 
-### Installing
+### Autostart
 
 You can setup to auto start python script in Windows using Task Scheduler and in Linux using cron
 
 #### Windows
 
 Here is [ResourceMonitorTask.xml](agent/ResourceMonitorTask.xml "ResourceMonitorTask.xml") for importing to Task Scheduler. All you need is change the path for agent.pyw script in Action tab.
+
+#### Linux
+
+You can use *cron* for autostart agent-script every minute but it was not tested by me.
 
 ### Screens
 
