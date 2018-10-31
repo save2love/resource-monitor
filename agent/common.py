@@ -108,5 +108,6 @@ def mainLoop(console):
 	except KeyboardInterrupt:
 		pass
 	except:
-		logging.error("Unexpected error: " + traceback.format_exc())
-		print("Unexpected error: " + traceback.format_exc())
+		if console:
+			logging.error("Unexpected error: " + traceback.format_exc())
+			print("Unexpected error: " + traceback.format_exc())
