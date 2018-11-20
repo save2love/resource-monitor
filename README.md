@@ -1,5 +1,7 @@
 # Resource Monitor for PC
 
+[![Build Status](https://travis-ci.org/save2love/resource-monitor.svg?branch=master)](https://travis-ci.org/save2love/resource-monitor)
+
 ![Device view](/img/device.jpg "Device")
 
 Simple and useful project, made to monitor system resources without opening Task Manager. It can show you CPU and RAM usage, HDD and network activity. All data are visualize with charts. On host system uses Python script for collecting resources utilization that makes monitor is crossplatform.
