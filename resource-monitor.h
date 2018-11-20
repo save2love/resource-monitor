@@ -2,6 +2,10 @@
 #define RESOURCE_MONITOR_H
 
 #include "Settings.h"
+#include "helper.h"
+#include "graph.h"
+#include "TheButton.h"
+#include <LiquidCrystal_I2C.h> // https://github.com/mrkaleArduinoLib/LiquidCrystal_I2C
 
 #define BUTTON_PIN 2
 

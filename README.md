@@ -16,7 +16,7 @@ Simple and useful project, made to monitor system resources without opening Task
 * [Python 3.5+](https://www.python.org/downloads/ "Python 3.5")
 
 #### Arduino libraries
-* [LiquidCrystal I2C by Marco Schwartz](https://github.com/marcoschwartz/LiquidCrystal_I2C "LiquidCrystal I2C")
+* [LiquidCrystal_I2C by Libor Gabaj](https://github.com/mrkaleArduinoLib/LiquidCrystal_I2C "LiquidCrystal_I2C")
 * [Bounce 2 by Thomas O Fredericks](https://github.com/thomasfredericks/Bounce2 "Bounce 2")
 
 #### Python libraries

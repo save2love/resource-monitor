@@ -1,7 +1,3 @@
-#include <LiquidCrystal_I2C.h>  // https://github.com/marcoschwartz/LiquidCrystal_I2C
-#include "helper.h"
-#include "graph.h"
-#include "TheButton.h"
 #include "resource-monitor.h"
 
 LiquidCrystal_I2C lcd(0x27, 20, 4); // Check I2C address of LCD, normally 0x27 or 0x3F
